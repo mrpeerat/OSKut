@@ -23,7 +23,7 @@ def load_model(engine='ws',mode='LSTM_Attension'):
         elif engine == 'lst20':
             lstm_node = 224
             attension_node = 32
-        elif engine == 'ws-augment':
+        elif 'ws-augment' in engine:
             lstm_node = 192
             attension_node = 32
         elif 'tl-deepcut' in engine:
@@ -80,16 +80,21 @@ def return_max_index(number_ranking,entropy_list):
 def scoring_function(entropy_before,x_function,y_dg_pred,y_entropy_function,y_prob_function,index):
     result = y_dg_pred[:]
     for i,items in enumerate(index):
-        char,char_type,addition = extract_features.feature(x_function[i],y_entropy_function[i],y_prob_function[i])
-        for idx in items:
-            if entropy_before == []:
-                y_pred_ds = model.predict([char[idx:idx+1],char_type[idx:idx+1],addition[idx:idx+1]])
+        if items != []:
+            char,char_type,addition = extract_features.feature(x_function[i],y_entropy_function[i],y_prob_function[i])
+            if entropy_before != []:
+                idx_cal = [*set(items)-set(entropy_before[i])]
+                char_final = char[idx_cal]; char_type_final = char_type[idx_cal]; addition_final = addition[idx_cal]
+            else:
+                char_final = char[items]; char_type_final = char_type[items]; addition_final = addition[items]
+                idx_cal = items
+            try:
+                y_pred_ds = model.predict([char_final,char_type_final,addition_final])
                 ans = (y_pred_ds.ravel() > 0.5).astype(int)
-                result[i][idx] = ans[0]
-            if entropy_before != [] and idx not in entropy_before[i]:
-                y_pred_ds = model.predict([char[idx:idx+1],char_type[idx:idx+1],addition[idx:idx+1]])
-                ans = (y_pred_ds.ravel() > 0.5).astype(int)
-                result[i][idx] = ans[0]      
+                for idx,idx_item in enumerate(idx_cal):
+                    result[i][idx_item] = ans[idx]
+            except:
+                pass
     return result
 
 def cut(y_pred_boolean,x_data):
@@ -111,8 +116,10 @@ def scads_cut(sent,k=1):
     if k == 1:
         if engine_mode == 'lst20':
             k =  100
-        elif engine_mode == 'tnhc' or engine_mode == 'ws-augment':
+        elif engine_mode == 'tnhc'
             k =  100
+        elif 'ws-augment' in engine_mode:
+            k = 100
         else: #ws
             k = 33 #27
     
