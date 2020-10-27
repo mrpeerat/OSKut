@@ -23,11 +23,12 @@ def load_model(engine='ws',mode='LSTM_Attension'):
         elif engine == 'lst20':
             lstm_node = 224
             attension_node = 32
+        elif 'tl-deepcut' in engine:
+            mode = 'dg'
         elif 'ws-augment' in engine:
             lstm_node = 192
             attension_node = 32
-        elif 'tl-deepcut' in engine:
-            mode = 'dg'
+        
         elif engine == 'deepcut_tnhc':
             mode = 'dg'
         else:
@@ -52,7 +53,9 @@ def load_model(engine='ws',mode='LSTM_Attension'):
 
         if mode == 'dg':
             try:
-                engine_type = engine.split('-')[2]
+                engine_type = engine.split('-')[2:]
+                engine_type = '-'.join(engine_type)
+                print(engine_type)
                 model_load.load_weights(f'scads_cut/weight/model_weight_{engine_type}.h5')
             except:
                 print()
@@ -116,7 +119,7 @@ def scads_cut(sent,k=1):
     if k == 1:
         if engine_mode == 'lst20':
             k =  100
-        elif engine_mode == 'tnhc'
+        elif engine_mode == 'tnhc':
             k =  100
         elif 'ws-augment' in engine_mode:
             k = 100
