@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+deepcut/__init__.py
+deepcut/deepcut.py
+deepcut/model.py
+deepcut/stop_words.py
+deepcut/train.py
+deepcut/utils.py
+deepcut.egg-info/PKG-INFO
+deepcut.egg-info/SOURCES.txt
+deepcut.egg-info/dependency_links.txt
+deepcut.egg-info/requires.txt
+deepcut.egg-info/top_level.txt
+deepcut/weight/cnn_without_ne_ab.h5
