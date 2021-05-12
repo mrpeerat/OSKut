@@ -1,25 +1,5 @@
 # -*- coding: utf-8 -*-
-
-import ahocorasick
-from urllib.request import urlopen
-from itertools import accumulate
-import operator
-import numpy as np
-import copy as cp
-from preprocessing import preprocess
-prepro = preprocess()
-from  tensorflow.keras.preprocessing.sequence import pad_sequences
-from sklearn.metrics import precision_recall_fscore_support
-#f = urlopen('https://raw.githubusercontent.com/bact/socialmedia/master/data/dict-th.txt')
-#f = urlopen('https://raw.githubusercontent.com/Knight-H/thai-lm/master/words_modified.txt') #Social Dict
-f = open('tws_cut/variable/words_modified.txt')
-dict_ = f.read().strip().split('\n')
-A = ahocorasick.Automaton()
-for idx, word in enumerate(dict_):
-  # insert word, with length of word
-  # this will be used later to calculate start_index and end_index (as features)
-    A.add_word(word, len(word)) 
-A.make_automaton()
+# + {}
 import tensorflow as tf
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Dense, Embedding, \
@@ -28,6 +8,28 @@ from tensorflow.keras.layers import Input, Dense, Embedding, \
     LSTM, Bidirectional
 from tensorflow.keras.layers import TimeDistributed
 from tensorflow.keras.optimizers import Adam,RMSprop
+
+
+import ahocorasick
+from itertools import accumulate
+import operator
+import numpy as np
+import copy as cp
+from preprocessing import preprocess
+prepro = preprocess()
+
+from  tensorflow.keras.preprocessing.sequence import pad_sequences
+from sklearn.metrics import precision_recall_fscore_support
+
+f = open('SKut/variable/words_modified.txt')
+dict_ = f.read().strip().split('\n')
+A = ahocorasick.Automaton()
+for idx, word in enumerate(dict_):
+    A.add_word(word, len(word)) 
+A.make_automaton()
+
+
+# -
 
 CHAR_TYPE = {
     u'กขฃคฆงจชซญฎฏฐฑฒณดตถทธนบปพฟภมยรลวศษสฬอ': 'c',
@@ -171,10 +173,9 @@ class Attention(tf.keras.Model):
         return context_vector, attention_weights
 
 
-
 def get_convo_nn2_lstm_attension(lstm_node,attention_node,optimizer,no_word=200, n_gram=21, no_char=178):
-    print('LSTM node:',lstm_node)
-    print('Attension:',attention_node)
+#     print('LSTM node:',lstm_node)
+#     print('Attension:',attention_node)
     input1 = Input(shape=(n_gram,))
     input2 = Input(shape=(n_gram,))
     input3 = Input(shape=(n_gram,))
@@ -217,9 +218,20 @@ def get_convo_nn2_lstm_attension(lstm_node,attention_node,optimizer,no_word=200,
     return model
 
 
-def eval_function(y_true,y_pred):
+def eval_function(y_true,y_pred): # char level
     precision, recall, fscore, _ = precision_recall_fscore_support(y_true, y_pred, average='binary')
     return fscore
+
+def evaluate(train : list, test: list): # Word level
+    train_acc = list(accumulate(map(len, train), func = operator.add))
+    test_acc = list(accumulate(map(len, test), func = operator.add))
+    train_set = set(zip([0,*train_acc], train_acc))
+    test_set = set(zip([0,*test_acc], test_acc))
+    correct = len(train_set & test_set)
+    pre = correct/len(test)
+    re = correct/len(test)
+    f1 = (2*pre*re)/(pre+re)
+    return f1
 
 def cut(y_pred_boolean,x_data):
     x_ = cp.deepcopy(x_data)
@@ -233,17 +245,6 @@ def cut(y_pred_boolean,x_data):
         answer.append(text)
     return answer 
 
-def evaluate(train : list, test: list):
-    train_acc = list(accumulate(map(len, train), func = operator.add))
-    test_acc = list(accumulate(map(len, test), func = operator.add))
-    train_set = set(zip([0,*train_acc], train_acc))
-    test_set = set(zip([0,*test_acc], test_acc))
-    correct = len(train_set & test_set)
-    pre = correct/len(test)
-    re = correct/len(test)
-    f1 = (2*pre*re)/(pre+re)
-    return f1
-
 def preprocess(x_data,y_true,y_ds_pred,y_dg_pred):
     dg_pred = cut([y_dg_pred],[x_data])
     true_pred = cut([y_true],[x_data])
@@ -256,7 +257,3 @@ def preprocess(x_data,y_true,y_ds_pred,y_dg_pred):
     f1_dg = evaluate(true_list,dg_list)
     f1_ds = evaluate(true_list,ds_list)
     return f1_dg,f1_ds
-
-
-
-

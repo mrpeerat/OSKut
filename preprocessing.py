@@ -90,7 +90,7 @@ class preprocess:
         
         return x,y
     
-    def create_feature_array(self,text, n_pad=21,array=True):
+    def create_feature_array(self,text, n_pad=21,array=True): # Feature Exac from deepcut
         """
         Create feature array of character and surrounding characters
         """
@@ -161,7 +161,7 @@ class preprocess:
             y_entropy = map(self.find_entropy,normalizae_data) #Random = False
         return list(y_entropy)
 
-    def predict_(self,x,og='false',new_bl='false',ws='false',dl=False):
+    def predict_(self,x,dl=False):
         x_char,x_type = self.create_feature_array(x)
 
         y_original_prob = list(map(self.pred,x))
