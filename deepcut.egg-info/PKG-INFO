@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: deepcut
+Version: 0.7.0.0
+Summary: A Thai word tokenization library using Deep Neural Network
+Home-page: https://github.com/rkcosmos/deepcut
+Author: Rakpong Kittinaradorn
+Author-email: r.kittinaradorn@gmail.com
+License: MIT
+Download-URL: https://github.com/rkcosmos/deepcut.git
+Description: UNKNOWN
+Keywords: thai word segmentation deep learning neural network development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
