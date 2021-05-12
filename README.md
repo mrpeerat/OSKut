@@ -110,7 +110,7 @@ You need to read the paper to understand why we have $k$ value!
   ```
 
 ## Performance
-<img src="https://user-images.githubusercontent.com/21156980/117923338-0dfce380-b31e-11eb-96f2-e61ccd6b9f20.png" width="600" height="386" />
+<img src="https://user-images.githubusercontent.com/21156980/117923338-0dfce380-b31e-11eb-96f2-e61ccd6b9f20.png" width="600"/>
 
 ## How to re-train the model?
 - You can re-train the model. The example is in the folder [Notebooks](https://github.com/mrpeerat/SEFR_CUT/tree/master/Notebooks) We provided everything for you!!
