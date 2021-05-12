@@ -82,35 +82,14 @@ You need to read the paper to understand why we have $k$ value!
   [['สวัสดี', 'ประเทศ', 'ไทย'], ['ลุง', 'ตู่', 'สู้', 'ๆ']]
   ```
 
-## Evaluation
-- We also provide Character & Word Evaluation by call function ```evaluation()``` 
-  - For example
-  ```python
-  answer = 'สวัสดี|ประเทศไทย'
-  pred = 'สวัสดี|ประเทศ|ไทย'
-  char_score,word_score = sefr_cut.evaluation(answer,pred)
-  print(f'Word Score: {word_score} Char Score: {char_score}')
-
-  Word Score: 0.4 Char Score: 0.8
-  
-  answer = ['สวัสดี|ประเทศไทย']
-  pred = ['สวัสดี|ประเทศ|ไทย']
-  char_score,word_score = sefr_cut.evaluation(answer,pred)
-  print(f'Word Score: {word_score} Char Score: {char_score}')
-
-  Word Score: 0.4 Char Score: 0.8
-  
-  
-  answer = [['สวัสดี|'],['ประเทศไทย']]
-  pred = [['สวัสดี|'],['ประเทศ|ไทย']]
-  char_score,word_score = sefr_cut.evaluation(answer,pred)
-  print(f'Word Score: {word_score} Char Score: {char_score}')
-  
-  Word Score: 0.4 Char Score: 0.8
-  ```
-
 ## Performance
-<img src="https://user-images.githubusercontent.com/21156980/117923338-0dfce380-b31e-11eb-96f2-e61ccd6b9f20.png" width="600"/>
+# Model
+<img src="https://user-images.githubusercontent.com/21156980/117925237-24f10500-b321-11eb-8e69-8efee577e1d7.png" width="600"/>
+# Without Data Augmentation
+<img src="https://user-images.githubusercontent.com/21156980/117925248-2a4e4f80-b321-11eb-8ae9-316c71529256g.png" width="600"/>
+# With Data Augmentation
+<img src="https://user-images.githubusercontent.com/21156980/117925342-4d78ff00-b321-11eb-80fa-59d71ce46a5a.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/21156980/117925347-4f42c280-b321-11eb-86a3-475b876b8851.png" width="600"/>
 
 ## How to re-train the model?
 - You can re-train the model. The example is in the folder [Notebooks](https://github.com/mrpeerat/SEFR_CUT/tree/master/Notebooks) We provided everything for you!!
