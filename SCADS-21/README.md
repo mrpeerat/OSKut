@@ -2,8 +2,7 @@
 
 Co-operate VISTEC x CMU (XXXXX)
 
-# Detail
-## Motivation and detail
+# Motivation and detail
 Due to social media data being underrepresented and difficult, it challenging to improve the performance of models with only 997 training sentences.\
 Most TWS models (deepcut,attacut) performed under 82% in out-of-domain social media scenarios (Wisesight).\
 To address this problem, we introduce a new dataset called 'Scalable Data Systems 2021' (SCADS-21), which consists of 49,997 text samples from Twitter.\
