@@ -13,3 +13,8 @@ We compared our dataset to the biggest [Thai social media dictionary](https://gi
 - Word segmentation
 - Misspell detection & correction
 - Named-entity boundary
+
+## Citation
+```
+TBD
+```
