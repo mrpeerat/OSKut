@@ -72,6 +72,9 @@ You need to read the paper to understand why we have $k$ value!
   [['สวัสดี', 'ประเทศ', 'ไทย'], ['ลุง', 'ตู่', 'สู้', 'ๆ']]
   ```
 ## New datasets!!
+```
+TBD
+```
 
 ## Performance
 ### Model
@@ -98,7 +101,7 @@ You need to read the paper to understand why we have $k$ value!
   #f1_hypothesis.append(eval_function(y_true,answer))
   #ax.plot(range(start,K_num,step),f1_hypothesis,c="r",marker='o',label='Best case')
   ```
-  - Link:[HERE](https://github.com/mrpeerat/SEFR_CUT/blob/master/Notebooks/3.Stacked%20Model%20Example.ipynb)
+  - Link: [HERE](https://github.com/mrpeerat/SEFR_CUT/blob/master/Notebooks/3.Stacked%20Model%20Example.ipynb)
   ### Use your trained model?
   - Just move your model inside 'Notebooks/model/' to 'seft_cut/model/' and call model in one line.
   ```python
@@ -108,6 +111,6 @@ You need to read the paper to understand why we have $k$ value!
 Thank you many code from
 
 - [Deepcut](https://github.com/rkcosmos/deepcut) (Baseline Model) : We used some of code from Deepcut to perform transfer learning 
-- [@bact](https://github.com/bact) (CRF training code) : We used some from https://github.com/bact/nlp-thai
+- [Arthit Suriyawongkul ](https://github.com/bact) (CRF training code) : We used some from https://github.com/bact/nlp-thai
 
 
