@@ -6,8 +6,8 @@ Thai word Segmentation using Convolutional Neural Network
 from setuptools import setup
 
 setup(
-    name='deepcut',
-    packages=['deepcut'],
+    name='OSKut',
+    packages=['oskut'],
     include_package_data=True,
     version='0.7.0.0',
     install_requires=['tensorflow>=2.0.0', 'pandas',
