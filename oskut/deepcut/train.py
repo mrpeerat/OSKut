@@ -8,12 +8,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_score, recall_score, f1_score
 from tensorflow.keras.callbacks import ModelCheckpoint, ReduceLROnPlateau
 
-if __package__ != 'deepcut':
-    from utils import create_n_gram_df, CHAR_TYPE_FLATTEN, CHARS_MAP, CHAR_TYPES_MAP
-    from model import get_convo_nn2
-else:
-    from .utils import create_n_gram_df, CHAR_TYPE_FLATTEN, CHARS_MAP, CHAR_TYPES_MAP
-    from .model import get_convo_nn2
+from .utils import create_n_gram_df, CHAR_TYPE_FLATTEN, CHARS_MAP, CHAR_TYPES_MAP
+from .model import get_convo_nn2
 
 #article_types = ['article', 'encyclopedia', 'news', 'novel']
 #article_types = ['wisesight'] 

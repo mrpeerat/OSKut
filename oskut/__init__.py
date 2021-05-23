@@ -1,12 +1,16 @@
+# -*- coding: utf-8 -*-
 import warnings
 warnings.filterwarnings('ignore')
 import numpy as np
 import copy as cp
 import operator
 from oskut.preprocessing import preprocess #Our class
-prepro = preprocess()
 import oskut.extract_features as extract_features
 from tensorflow.keras.optimizers import Adam,RMSprop
+import os
+
+prepro = preprocess()
+PATH = os.path.dirname(__file__)
 
 
 
@@ -56,12 +60,12 @@ def load_model(engine='ws',mode='LSTM_Attension'):
                 engine_type = engine.split('-')[2:]
                 engine_type = '-'.join(engine_type)
                 print(engine_type)
-                model_load.load_weights(f'SKut/weight/model_weight_{engine_type}.h5')
+                model_load.load_weights(os.path.join(PATH,f'weight/model_weight_{engine_type}.h5'))
             except:
                 print()
                 raise Exception('Error Engine TL-XXXX-CORPUS_NAME')  
         else: 
-            model_load.load_weights(f'SKut/model/ds_weights/{engine}_{opt_name}_{mode}_{lstm_node}_{attension_node}_weight.h5')
+            model_load.load_weights(os.path.join(PATH,f'model/ds_weights/{engine}_{opt_name}_{mode}_{lstm_node}_{attension_node}_weight.h5'))
         global model; model = model_load
     else:
         pass

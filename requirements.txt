@@ -3,3 +3,4 @@ pandas
 scipy
 scikit-learn
 tensorflow>=2.0.0
+pyahocorasick<=1.4.
