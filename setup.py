@@ -1,7 +1,4 @@
 #! /usr/bin/env python
-"""
-Thai word Segmentation using Convolutional Neural Network
-"""
 
 from setuptools import setup
 
@@ -13,12 +10,11 @@ setup(
     install_requires=['tensorflow>=2.0.0', 'pandas',
                       'scipy', 'numpy', 'scikit-learn'],
     license='MIT',
-    description='A Thai word tokenization library using Deep Neural Network',
+    description='Handling Cross- and Out-of-Domain Samples in Thai Word Segmentation (ACL 2020 Findings) Stacked Ensemble Framework and DeepCut as Baseline model',
     author='Rakpong Kittinaradorn',
     author_email='r.kittinaradorn@gmail.com',
-    url='https://github.com/rkcosmos/deepcut',
-    download_url='https://github.com/rkcosmos/deepcut.git',
-    keywords=['thai word segmentation deep learning neural network development'],
+    url='https://github.com/mrpeerat/OSKut',
+    keywords=['thai','word segmentation','deep learning'],
     classifiers=[
         'Development Status :: 3 - Alpha'
     ],

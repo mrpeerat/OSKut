@@ -15,7 +15,7 @@ from itertools import accumulate
 import operator
 import numpy as np
 import copy as cp
-from preprocessing import preprocess
+from oskut.preprocessing import preprocess
 prepro = preprocess()
 
 from  tensorflow.keras.preprocessing.sequence import pad_sequences

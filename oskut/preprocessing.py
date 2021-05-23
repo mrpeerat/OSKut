@@ -5,7 +5,7 @@ import numpy as np
 from scipy.stats import entropy
 from sklearn.preprocessing import Normalizer
 from tensorflow import keras
-import deepcut
+import oskut.deepcut as deepcut
 
 class preprocess:
     repls = {'<NE>' : '','</NE>' : '','<AB>': '','</AB>': '','\n': '','\r': '','\r\n': '','\n\n':'','<p>':'','<s>':''}
