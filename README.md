@@ -21,8 +21,8 @@ TBD
 - tensorflow >= 2.0
 
 ## Example
-- Example files are on [SEFR Example notebook](https://github.com/mrpeerat/SEFR_CUT/blob/master/Notebooks/1.SEFR_CUT%20example.ipynb)
-- [Try it on Colab](https://colab.research.google.com/drive/1xA2rzYVnVWwxy6oFkISiG63x-5u1gwa1?usp=sharing)
+- Example files are on [OSKut Example notebook](https://github.com/mrpeerat/OSKut/blob/main/notebooks/run.ipynb)
+- [Try it on Colab](https://colab.research.google.com/github/mrpeerat/OSKut/blob/main/notebooks/run.ipynb)
 ### Load Engine & Engine Mode
 - ws1000, tnhc, and BEST !!
   - ws1000: The model trained on Wisesight-1000 and test on Wisesight-160
