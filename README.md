@@ -1,4 +1,4 @@
-# SKut (StacKed cut with Filter and Refine framework for Word Segmentation) 
+# OSKut (Out-of-domain StacKed cut with Filter and Refine framework for Word Segmentation) 
 Handling Cross- and Out-of-Domain Samples in Thai Word Segmentation (ACL 2020 Findings) <br>
 Stacked Ensemble Framework and DeepCut as Baseline model<br>
 
