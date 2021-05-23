@@ -11,7 +11,7 @@ from tensorflow.keras.optimizers import Adam,RMSprop
 
 
 def load_model(engine='ws',mode='LSTM_Attension'):
-    print('loading model.....')
+#     print('loading model.....')
     if engine != 'deepcut':
         optimizer = RMSprop(); opt_name = 'rmsprop'
         if engine == 'ws':
@@ -110,7 +110,7 @@ def cut(y_pred_boolean,x_data):
         answer.append(text)
     return answer 
 
-def SKut(sent,k=1):
+def OSKut(sent,k=1):
     if type(sent) != list:
         sent = [sent]
 
@@ -131,7 +131,7 @@ def SKut(sent,k=1):
         y_pred = list(map(prepro.argmax_function,y_pred_))
         x_answer = cut(y_pred,sent)
     else:
-        y_original,y_entropy_original,y_prob_original = prepro.predict_(sent,og='true') #y_original = dg-model
+        y_original,y_entropy_original,y_prob_original = prepro.predict_(sent) #y_original = dg-model
         if engine_mode == 'deepcut':
             x_answer = cut(y_original,sent)
         else:
