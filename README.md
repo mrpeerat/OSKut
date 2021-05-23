@@ -21,8 +21,8 @@ TBD
 - tensorflow >= 2.0
 
 ## Example
-- Example files are on [OSKut Example notebook](https://github.com/mrpeerat/OSKut/blob/main/notebooks/run.ipynb)
-- [Try it on Colab](https://colab.research.google.com/github/mrpeerat/OSKut/blob/main/notebooks/run.ipynb)
+- Example files are on [OSKut Example notebook](https://github.com/mrpeerat/OSKut/blob/main/notebooks/OSKut_how1.ipynb)
+- [Try it on Colab](https://colab.research.google.com/github/mrpeerat/OSKut/blob/main/notebooks/OSKut_how1.ipynb)
 ### Load Engine & Engine Mode
 - ws1000, tnhc, and BEST !!
   - ws1000: The model trained on Wisesight-1000 and test on Wisesight-160
