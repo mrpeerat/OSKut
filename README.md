@@ -18,8 +18,7 @@ TBD
 ## How To use
 ### Requirements
 - python >= 3.6
-- python-crfsuite >= 0.9.7
-- pyahocorasick == 1.4.0
+- tensorflow >= 2.0
 
 ## Example
 - Example files are on [SEFR Example notebook](https://github.com/mrpeerat/SEFR_CUT/blob/master/Notebooks/1.SEFR_CUT%20example.ipynb)
