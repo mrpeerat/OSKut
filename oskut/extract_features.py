@@ -15,18 +15,22 @@ from itertools import accumulate
 import operator
 import numpy as np
 import copy as cp
-from preprocessing import preprocess
+from oskut.preprocessing import preprocess
 prepro = preprocess()
 
 from  tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.metrics import precision_recall_fscore_support
+import os
 
-f = open('SKut/variable/words_modified.txt')
-dict_ = f.read().strip().split('\n')
+PATH = os.path.dirname(__file__)
+
+with open(os.path.join(PATH,'variable/words_modified.txt'), encoding='utf-8-sig') as f:
+    dict_ = f.read().strip().split('\n')
 A = ahocorasick.Automaton()
 for idx, word in enumerate(dict_):
     A.add_word(word, len(word)) 
 A.make_automaton()
+
 
 
 # -

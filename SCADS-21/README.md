@@ -18,3 +18,7 @@ We compared our dataset to the biggest [Thai social media dictionary](https://gi
 ```
 TBD
 ```
+
+## License
+
+CC-BY-SA 3.0
