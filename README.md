@@ -13,7 +13,7 @@ TBD
 ```
 
 ## Install
-> pip install xxxxxx
+> pip install OSKut
 
 ## How To use
 ### Requirements
@@ -30,32 +30,32 @@ TBD
   - BEST: The model trained on BEST-2010 Corpus (NECTEC)
   - SCADS: The model trained on SCADS-21 Corpus (VISTEC)
   ```python
-  sefr_cut.load_model(engine='ws1000')
+  oskut.load_model(engine='ws1000')
   # OR
-  sefr_cut.load_model(engine='tnhc')
+  oskut.load_model(engine='tnhc')
   # OR
-  sefr_cut.load_model(engine='best')
+  oskut.load_model(engine='best')
   ```
 - tl-deepcut-XXXX
   - We also provide transfer learning of deepcut on 'Wisesight' as tl-deepcut-ws1000 and 'TNHC' as tl-deepcut-tnhc
   ```python
-  sefr_cut.load_model(engine='tl-deepcut-ws1000')
+  oskut.load_model(engine='tl-deepcut-ws1000')
   # OR
-  sefr_cut.load_model(engine='tl-deepcut-tnhc')
+  oskut.load_model(engine='tl-deepcut-tnhc')
   ```
 - deepcut
   - We also provide the original deepcut
   ```python
-  sefr_cut.load_model(engine='deepcut')
+  oskut.load_model(engine='deepcut')
   ```
 ### Segment Example
 You need to read the paper to understand why we have $k$ value!
 - Tokenize with default k-value
   ```python
-  sefr_cut.load_model(engine='ws1000')
-  print(sefr_cut.tokenize(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ']))
-  print(sefr_cut.tokenize(['สวัสดีประเทศไทย']))
-  print(sefr_cut.tokenize('สวัสดีประเทศไทย'))
+  oskut.load_model(engine='ws1000')
+  print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ']))
+  print(oskut.OSKut(['สวัสดีประเทศไทย']))
+  print(oskut.OSKut('สวัสดีประเทศไทย'))
   
   [['สวัสดี', 'ประเทศ', 'ไทย'], ['ลุง', 'ตู่', 'สู้', 'ๆ']]
   [['สวัสดี', 'ประเทศ', 'ไทย']]
@@ -63,9 +63,9 @@ You need to read the paper to understand why we have $k$ value!
   ```
 - Tokenize with a various k-value
   ```python
-  sefr_cut.load_model(engine='ws1000')
-  print(sefr_cut.tokenize(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ'],k=5)) # refine only 5% of character number
-  print(sefr_cut.tokenize(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ'],k=100)) # refine 100% of character number
+  oskut.load_model(engine='ws1000')
+  print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ'],k=5)) # refine only 5% of character number
+  print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ'],k=100)) # refine 100% of character number
   
   [['สวัสดี', 'ประเทศไทย'], ['ลุงตู่', 'สู้', 'ๆ']]
   [['สวัสดี', 'ประเทศ', 'ไทย'], ['ลุง', 'ตู่', 'สู้', 'ๆ']]
@@ -102,7 +102,7 @@ TBD
   ```
   - Link: [HERE](https://github.com/mrpeerat/SEFR_CUT/blob/master/Notebooks/3.Stacked%20Model%20Example.ipynb)
   ### Use your trained model?
-  - Just move your model inside 'Notebooks/model/' to 'seft_cut/model/' and call model in one line.
+  - Just move your model inside 'Notebooks/model/' to 'oskut/model/' and call model in one line.
   ```python
   SEFR_CUT.load_model(engine='my_model')
   ```
