@@ -28,7 +28,7 @@ TBD
   - ws1000: The model trained on Wisesight-1000 and test on Wisesight-160
   - tnhc: The model trained on TNHC (80:20 train&test split with random seed 42)
   - BEST: The model trained on BEST-2010 Corpus (NECTEC)
-  - SCADS: The model trained on SCADS-21 Corpus (VISTEC)
+  - SCADS: The model trained on VISTEC-TP-TH-2021 Corpus (VISTEC)
   ```python
   oskut.load_model(engine='ws1000')
   # OR
