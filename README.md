@@ -52,7 +52,7 @@ TBD
 You need to read the paper to understand why we have $k$ value!
 - Tokenize with default k-value
   ```python
-  oskut.load_model(engine='ws1000')
+  oskut.load_model(engine='ws')
   print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ']))
   print(oskut.OSKut(['สวัสดีประเทศไทย']))
   print(oskut.OSKut('สวัสดีประเทศไทย'))
@@ -63,7 +63,7 @@ You need to read the paper to understand why we have $k$ value!
   ```
 - Tokenize with a various k-value
   ```python
-  oskut.load_model(engine='ws1000')
+  oskut.load_model(engine='ws')
   print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ'],k=5)) # refine only 5% of character number
   print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ'],k=100)) # refine 100% of character number
   
