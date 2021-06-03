@@ -1,6 +1,6 @@
 # New dataset "VISTEC-TP-TH-21"
 
-Co-operate VISTEC x CMU (XXXXX)
+Co-operate VISTEC x ChiangMai University
 
 # Motivation and detail
 Due to social media data being underrepresented and difficult, it is challenging to improve the performance of models with only 997 training sentences. \
@@ -15,14 +15,25 @@ We also included new guidelines about word editing criteria for misspelt words s
 We compared our dataset to the biggest [Thai social media dictionary](https://github.com/Knight-H/thai-lm) and found 79K words that did not appear in the dictionary.\
 
 ## Task inside
-- Word segmentation
-- Misspell detection & correction
-- Named-entity boundary
+- Word segmentation: speacial character:'|'
+- Misspell detection & correction: tag:<msp> for detection and tag:<msp='XX'>XXX</msp> for correction
+- Named-entity boundary: tag:<ne>
+
+
 
 ## Citation
 ```
 TBD
 ```
+
+## Developer and Annotator
+Corpus by 
+Saroj Buaphanngam; Pornwipa Chaisomkhun; Chayanin Boonsongsak
+สาโรจน์ บัวพันธุ์งาม; พรวิภา ไชยสมคุณ; ชญานิน บุญส่งศักดิ์
+
+Supported by 
+Titipat Sukhvibul; Juggapong Natwichai
+ธิติพัฒน์ สุขวิบูลย์; จักรพงศ์ นาทวิชัย
 
 ## License
 
