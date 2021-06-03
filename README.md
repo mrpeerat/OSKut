@@ -1,4 +1,8 @@
 # OSKut (Out-of-domain StacKed cut with Filter and Refine framework for Word Segmentation) 
+
+![https://github.com/mrpeerat/OSKut/blob/main/LICENSE](https://img.shields.io/badge/license-MIT-green)
+[![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrpeerat/OSKut/blob/main/notebooks/OSKut_how1.ipynb)
+
 Handling Cross- and Out-of-Domain Samples in Thai Word Segmentation (ACL 2021 Findings) <br>
 Stacked Ensemble Framework and DeepCut as Baseline model<br>
 
