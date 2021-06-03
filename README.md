@@ -59,20 +59,20 @@ You need to read the paper to understand why we have $k$ value!
 - Tokenize with default k-value
   ```python
   oskut.load_model(engine='ws')
-  print(oskut.OSKut(['เบียร์|ยู|ไม่|อร่อย|สัด|ๆ|ๆ|ๆ|ๆ|ๆ|ฟ|ๆ']))
-  print(oskut.OSKut('เบียร์|ยู|ไม่|อร่อย|สัด|ๆ|ๆ|ๆ|ๆ|ๆ|ฟ|ๆ'))
+  print(oskut.OSKut(['เบียร์ยูไม่อร่อยสัดๆๆๆๆๆฟๆ']))
+  print(oskut.OSKut('เบียร์ยูไม่อร่อยสัดๆๆๆๆๆฟๆ'))
   
-  [['สวัสดี', 'ประเทศ', 'ไทย']]
-  [['สวัสดี', 'ประเทศ', 'ไทย']]
+  ['เบียร์', 'ยู', 'ไม่', 'อร่อย', 'สัด', 'ๆ', 'ๆ', 'ๆ', 'ๆ', 'ๆฟ', 'ๆ']
+  ['เบียร์', 'ยู', 'ไม่', 'อร่อย', 'สัด', 'ๆ', 'ๆ', 'ๆ', 'ๆ', 'ๆฟ', 'ๆ']
   ```
 - Tokenize with a various k-value
   ```python
   oskut.load_model(engine='ws')
-  print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ'],k=5)) # refine only 5% of character number
-  print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ'],k=100)) # refine 100% of character number
+  print(oskut.OSKut('เบียร์ยูไม่อร่อยสัดๆๆๆๆๆฟๆ',k=5)) # refine only 5% of character number
+  print(oskut.OSKut('เบียร์ยูไม่อร่อยสัดๆๆๆๆๆฟๆ',k=100)) # refine 100% of character number
   
-  [['สวัสดี', 'ประเทศไทย'], ['ลุงตู่', 'สู้', 'ๆ']]
-  [['สวัสดี', 'ประเทศ', 'ไทย'], ['ลุง', 'ตู่', 'สู้', 'ๆ']]
+  ['เบียร์', 'ยู', 'ไม่', 'อร่อย', 'สัด', 'ๆ', 'ๆ', 'ๆ', 'ๆ', 'ๆฟๆ']
+  ['เบียร์', 'ยู', 'ไม่', 'อร่อย', 'สัด', 'ๆ', 'ๆ', 'ๆ', 'ๆ', 'ๆฟ', 'ๆ']
   ```
   
 ## New datasets!!
