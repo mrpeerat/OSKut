@@ -24,22 +24,28 @@ TBD
 - Example files are on [OSKut Example notebook](https://github.com/mrpeerat/OSKut/blob/main/notebooks/OSKut_how1.ipynb)
 - [Try it on Colab](https://colab.research.google.com/github/mrpeerat/OSKut/blob/main/notebooks/OSKut_how1.ipynb)
 ### Load Engine & Engine Mode
-- ws1000, tnhc, and BEST !!
-  - ws1000: The model trained on Wisesight-1000 and test on Wisesight-160
+- ws, tnhc, and BEST !!
+  - ws: The model trained on Wisesight-1000 and test on Wisesight-160
+  - ws-augment-60p: The model trained on Wisesight-1000 augmented with top-60% entropy
   - tnhc: The model trained on TNHC (80:20 train&test split with random seed 42)
   - BEST: The model trained on BEST-2010 Corpus (NECTEC)
   - SCADS: The model trained on VISTEC-TP-TH-2021 Corpus (VISTEC)
   ```python
-  oskut.load_model(engine='ws1000')
+  oskut.load_model(engine='ws')
+  # OR
+  oskut.load_model(engine='ws-augment-60p')
   # OR
   oskut.load_model(engine='tnhc')
   # OR
   oskut.load_model(engine='best')
+  # OR
+  oskut.load_model(engine='scads')
+  # OR
   ```
 - tl-deepcut-XXXX
-  - We also provide transfer learning of deepcut on 'Wisesight' as tl-deepcut-ws1000 and 'TNHC' as tl-deepcut-tnhc
+  - We also provide transfer learning of deepcut on 'Wisesight' as tl-deepcut-ws and 'TNHC' as tl-deepcut-tnhc
   ```python
-  oskut.load_model(engine='tl-deepcut-ws1000')
+  oskut.load_model(engine='tl-deepcut-ws')
   # OR
   oskut.load_model(engine='tl-deepcut-tnhc')
   ```
@@ -53,11 +59,9 @@ You need to read the paper to understand why we have $k$ value!
 - Tokenize with default k-value
   ```python
   oskut.load_model(engine='ws')
-  print(oskut.OSKut(['สวัสดีประเทศไทย','ลุงตู่สู้ๆ']))
-  print(oskut.OSKut(['สวัสดีประเทศไทย']))
-  print(oskut.OSKut('สวัสดีประเทศไทย'))
+  print(oskut.OSKut(['เบียร์|ยู|ไม่|อร่อย|สัด|ๆ|ๆ|ๆ|ๆ|ๆ|ฟ|ๆ']))
+  print(oskut.OSKut('เบียร์|ยู|ไม่|อร่อย|สัด|ๆ|ๆ|ๆ|ๆ|ๆ|ฟ|ๆ'))
   
-  [['สวัสดี', 'ประเทศ', 'ไทย'], ['ลุง', 'ตู่', 'สู้', 'ๆ']]
   [['สวัสดี', 'ประเทศ', 'ไทย']]
   [['สวัสดี', 'ประเทศ', 'ไทย']]
   ```
@@ -70,10 +74,12 @@ You need to read the paper to understand why we have $k$ value!
   [['สวัสดี', 'ประเทศไทย'], ['ลุงตู่', 'สู้', 'ๆ']]
   [['สวัสดี', 'ประเทศ', 'ไทย'], ['ลุง', 'ตู่', 'สู้', 'ๆ']]
   ```
+  
 ## New datasets!!
 VISTEC-TP-TH-2021 (VISTEC), which consists of 49,997 text samples from Twitter (2017-2019). \
 VISTEC corpus contains 49,997 sentences with 3.39M words where the collection was manually annotated by linguists on four tasks, namely word segmentation, misspelling detection and correction, and named entity recognition. \
 For more information and download [click here](https://github.com/mrpeerat/OSKut/tree/main/VISTEC-TP-TH-2021)
+
 ## Performance
 ### Model
 <img src="https://user-images.githubusercontent.com/21156980/117925237-24f10500-b321-11eb-8e69-8efee577e1d7.png" width="600"/>
