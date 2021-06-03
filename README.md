@@ -43,7 +43,7 @@ TBD
   # OR
   ```
 - tl-deepcut-XXXX
-  - We also provide transfer learning of deepcut on 'Wisesight' as tl-deepcut-ws and 'TNHC' as tl-deepcut-tnhc
+  - We also provide transfer learning of deepcut on 'Wisesight' as tl-deepcut-ws, 'TNHC' as tl-deepcut-tnhc, and 'LST20' as tl-deepcut-lst20
   ```python
   oskut.load_model(engine='tl-deepcut-ws')
   # OR
