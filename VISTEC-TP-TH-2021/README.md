@@ -1,6 +1,5 @@
 # New dataset "VISTEC-TP-TH-21"
-
-Co-operate VISTEC x ChiangMai University
+VISTEC x ChiangMai University
 
 # Motivation and detail
 Due to social media data being underrepresented and difficult, it is challenging to improve the performance of models with only 997 training sentences. \
@@ -27,11 +26,11 @@ TBD
 
 ## Developer and Annotator
 Corpus by 
-Saroj Buaphanngam; Pornwipa Chaisomkhun; Chayanin Boonsongsak
+Saroj Buaphanngam; Pornwipa Chaisomkhun; Chayanin Boonsongsak \
 สาโรจน์ บัวพันธุ์งาม; พรวิภา ไชยสมคุณ; ชญานิน บุญส่งศักดิ์
 
 Supported by 
-Titipat Sukhvibul; Juggapong Natwichai
+Titipat Sukhvibul; Juggapong Natwichai \
 ธิติพัฒน์ สุขวิบูลย์; จักรพงศ์ นาทวิชัย
 
 ## License
