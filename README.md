@@ -71,10 +71,9 @@ You need to read the paper to understand why we have $k$ value!
   [['สวัสดี', 'ประเทศ', 'ไทย'], ['ลุง', 'ตู่', 'สู้', 'ๆ']]
   ```
 ## New datasets!!
-```
-TBD
-```
-
+VISTEC-TP-TH-2021 (VISTEC), which consists of 49,997 text samples from Twitter (2017-2019). \
+VISTEC corpus contains 49,997 sentences with 3.39M words where the collection was manually annotated by linguists on four tasks, namely word segmentation, misspelling detection and correction, and named entity recognition. \
+For more information and download [click here](https://github.com/mrpeerat/OSKut/tree/main/VISTEC-TP-TH-2021)
 ## Performance
 ### Model
 <img src="https://user-images.githubusercontent.com/21156980/117925237-24f10500-b321-11eb-8e69-8efee577e1d7.png" width="600"/>
