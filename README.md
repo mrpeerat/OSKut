@@ -1,5 +1,5 @@
 # OSKut (Out-of-domain StacKed cut with Filter and Refine framework for Word Segmentation) 
-Handling Cross- and Out-of-Domain Samples in Thai Word Segmentation (ACL 2020 Findings) <br>
+Handling Cross- and Out-of-Domain Samples in Thai Word Segmentation (ACL 2021 Findings) <br>
 Stacked Ensemble Framework and DeepCut as Baseline model<br>
 
 ## Read more:
