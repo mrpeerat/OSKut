@@ -7,8 +7,7 @@ Due to social media data being underrepresented and difficult, it is challenging
 Most TWS models performed under 82\% in out-of-domain social media scenarios (Wisesight).\
 To address this problem, we introduce a new dataset called VISTEC-TP-TH-2021 (VISTEC), which consists of 49,997 text samples from Twitter (2017-2019).\
 VISTEC corpus contains 49,997 sentences with 3.39M words where the collection was manually annotated by linguists on four tasks, namely word segmentation, misspelling detection and correction, and named entity recognition.\
-In the data collection process, we focused on the longest sentences to create a more challenging dataset due to the fact that long sentence made the model's performance decrease significantly comparing with short sentence in the same domain. \
-The Out-of-Vocabulary rate on the test set is 13.65%.\
+In the data collection process, we focused on the longest sentences to create a more challenging dataset due to the fact that long sentence made the model's performance decrease significantly comparing with short sentence in the same domain. The Out-of-Vocabulary rate on the test set is 13.65%. \
 
 We followed LST20's work for the word and named entity tasks annotation guideline.\
 We also included new guidelines about word editing criteria for misspelt words such as words used on the internet (Netspeak), transliterated loanwords, abbreviations, and shortened words, by using the Royal Institute Thai dictionary.\
