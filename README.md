@@ -95,6 +95,4 @@ For more information and download [click here](https://github.com/mrpeerat/OSKut
 Thank you many code from
 
 - [Deepcut](https://github.com/rkcosmos/deepcut) (Baseline Model) : We used some of code from Deepcut to perform transfer learning 
-- [Arthit Suriyawongkul ](https://github.com/bact) (CRF training code) : We used some from https://github.com/bact/nlp-thai
-
 
