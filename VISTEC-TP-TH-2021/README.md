@@ -14,9 +14,9 @@ We also included new guidelines about word editing criteria for misspelt words s
 We compared our dataset to the biggest [Thai social media dictionary](https://github.com/Knight-H/thai-lm) and found 79K words that did not appear in the dictionary.
 
 ## Tasks inside
-- Word segmentation: speacial character:'|'
-- Misspell detection & correction: tag: ```<msp>``` for detection and tag: <msp='XX'>XXX</msp> for correction
-- Named-entity boundary: tag: <ne>
+- Word segmentation: speacial character:```|```
+- Misspell detection & correction: tag: ```<msp>``` for detection and tag: ```<msp='XX'>XXX</msp>``` for correction
+- Named-entity boundary: tag: ```<ne>```
 
 ## Citation
 ```
