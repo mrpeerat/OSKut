@@ -24,13 +24,13 @@ TBD
 ```
 
 ## Developer and Annotator from Chiang Mai University
-Corpus by 
+Corpus by \
 Saroj Buaphanngam สาโรจน์ บัวพันธุ์งาม \
 Pornwipa Chaisomkhun พรวิภา ไชยสมคุณ \
 Chayanin Boonsongsak ชญานิน บุญส่งศักดิ์
 
-Supported by 
-Titipat Sukhvibul ธิติพัฒน์ สุขวิบูลย์
+Supported by \
+Titipat Sukhvibul ธิติพัฒน์ สุขวิบูลย์\
 Juggapong Natwichai จักรพงศ์ นาทวิชัย
 
 ## License
