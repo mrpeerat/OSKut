@@ -15,8 +15,8 @@ We compared our dataset to the biggest [Thai social media dictionary](https://gi
 
 ## Tasks inside
 - Word segmentation: speacial character:'|'
-- Misspell detection & correction: tag:<msp> for detection and tag:<msp='XX'>XXX</msp> for correction
-- Named-entity boundary: tag:<ne>
+- Misspell detection & correction: tag: <msp> for detection and tag: <msp='XX'>XXX</msp> for correction
+- Named-entity boundary: tag: <ne>
 
 ## Citation
 ```
