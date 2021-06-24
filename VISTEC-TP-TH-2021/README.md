@@ -10,7 +10,7 @@ In the data collection process, we focused on the longest sentences to create a 
 
 We followed LST20's work for the word and named entity tasks annotation guideline.\
 We also included new guidelines about word editing criteria for misspelt words such as words used on the internet (Netspeak), transliterated loanwords, abbreviations, and shortened words, by using the Royal Institute Thai dictionary.\
-We compared our dataset to the biggest [Thai social media dictionary](https://github.com/Knight-H/thai-lm) and found 79K words that did not appear in the dictionary.\
+We compared our dataset to the biggest [Thai social media dictionary](https://github.com/Knight-H/thai-lm) and found 79K words that did not appear in the dictionary.
 
 ## Task inside
 - Word segmentation: speacial character:'|'
