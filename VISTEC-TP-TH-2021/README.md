@@ -1,5 +1,6 @@
 # New dataset "VISTEC-TP-TH-21"
-VISTEC x ChiangMai University
+The largest social media domain datasets for Thai text processing (word segmentation, misspell correction and detection, and named-entity boundary)\
+Co-operate between Vidyasirimedhi Institute of Science and Technology, Thailand and Chiang Mai University, Thailand.
 
 # Motivation and detail
 Due to social media data being underrepresented and difficult, it is challenging to improve the performance of models with only 997 training sentences. \
@@ -12,26 +13,25 @@ We followed LST20's work for the word and named entity tasks annotation guidelin
 We also included new guidelines about word editing criteria for misspelt words such as words used on the internet (Netspeak), transliterated loanwords, abbreviations, and shortened words, by using the Royal Institute Thai dictionary.\
 We compared our dataset to the biggest [Thai social media dictionary](https://github.com/Knight-H/thai-lm) and found 79K words that did not appear in the dictionary.
 
-## Task inside
+## Tasks inside
 - Word segmentation: speacial character:'|'
 - Misspell detection & correction: tag:<msp> for detection and tag:<msp='XX'>XXX</msp> for correction
 - Named-entity boundary: tag:<ne>
-
-
 
 ## Citation
 ```
 TBD
 ```
 
-## Developer and Annotator
+## Developer and Annotator from Chiang Mai University
 Corpus by 
-Saroj Buaphanngam; Pornwipa Chaisomkhun; Chayanin Boonsongsak \
-สาโรจน์ บัวพันธุ์งาม; พรวิภา ไชยสมคุณ; ชญานิน บุญส่งศักดิ์
+Saroj Buaphanngam สาโรจน์ บัวพันธุ์งาม \
+Pornwipa Chaisomkhun พรวิภา ไชยสมคุณ \
+Chayanin Boonsongsak ชญานิน บุญส่งศักดิ์
 
 Supported by 
-Titipat Sukhvibul; Juggapong Natwichai \
-ธิติพัฒน์ สุขวิบูลย์; จักรพงศ์ นาทวิชัย
+Titipat Sukhvibul ธิติพัฒน์ สุขวิบูลย์
+Juggapong Natwichai จักรพงศ์ นาทวิชัย
 
 ## License
 
