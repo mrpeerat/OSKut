@@ -1,5 +1,5 @@
 # New dataset "VISTEC-TP-TH-21"
-The largest social media domain datasets for Thai text processing (word segmentation, misspell correction and detection, and named-entity boundary)\
+The largest social media domain datasets for Thai text processing (word segmentation, misspell correction and detection, and named-entity boundary) called "VISTEC-TP-TH-2021" or **VISTEC-2021**\
 Co-operate between Vidyasirimedhi Institute of Science and Technology, Thailand and Chiang Mai University, Thailand.
 
 # Motivation and detail
