@@ -1,4 +1,4 @@
-# OSKut (Out-of-domain StacKed cut with Filter and Refine framework for Word Segmentation) 
+# OSKut (Out-of-domain StacKed cut for Word Segmentation) 
 
 [![](https://img.shields.io/badge/license-MIT-green)](https://github.com/mrpeerat/OSKut/blob/main/LICENSE)
 [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrpeerat/OSKut/blob/main/notebooks/OSKut_how1.ipynb)
