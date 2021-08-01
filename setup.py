@@ -9,7 +9,7 @@ setup(
     name='OSKut',
     packages=['oskut'],
     include_package_data=True,
-    version='1.0',
+    version='1.1',
     long_description=readme,
     long_description_content_type='text/markdown',
     install_requires=[
@@ -23,7 +23,7 @@ setup(
     license='MIT',
     package_data={
         'oskut': [
-            'model/*',
+            'model/ds_weights/*',
             'variable/*',
             'weight/*',
             'deepcut/weight/*'
