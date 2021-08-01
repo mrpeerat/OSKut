@@ -8,7 +8,7 @@ Stacked Ensemble Framework and DeepCut as Baseline model<br>
 
 ## Read more:
 - Paper: TBD
-- Related Work: [Domain Adaptation of Thai Word Segmentation Models using Stacked Ensemble](https://www.aclweb.org/anthology/2020.emnlp-main.315/)
+- Related Work (EMNLP2020): [Domain Adaptation of Thai Word Segmentation Models using Stacked Ensemble](https://www.aclweb.org/anthology/2020.emnlp-main.315/)
 - Blog: [Domain Adaptation กับตัวตัดคำ มันดีย์จริงๆ](https://medium.com/@pingloaf)
 
 ## Citation
