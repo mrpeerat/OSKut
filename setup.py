@@ -9,7 +9,7 @@ setup(
     name='OSKut',
     packages=find_packages(exclude=["tests", "tests.*"]),
     include_package_data=True,
-    version='1.2',
+    version='1.3',
     long_description=readme,
     long_description_content_type='text/markdown',
     install_requires=[
