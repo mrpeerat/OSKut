@@ -32,6 +32,9 @@ def load_model(engine='ws',mode='LSTM_Attension'):
         elif 'ws-augment' in engine:
             lstm_node = 192
             attension_node = 32
+        elif 'scads' in engine:
+            lstm_node = 224
+            attension_node = 96
         
         elif engine == 'deepcut_tnhc':
             mode = 'dg'
@@ -124,6 +127,8 @@ def OSKut(sent,k=1):
         elif engine_mode == 'tnhc':
             k =  100
         elif 'ws-augment' in engine_mode:
+            k = 100
+        elif 'scads' in engine_mode:
             k = 100
         else: #ws
             k = 33 #27
