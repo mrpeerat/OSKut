@@ -18,6 +18,9 @@ We compared our dataset to the biggest [Thai social media dictionary](https://gi
 - Misspell detection & correction: tag: ```<msp>``` for detection and tag: ```<msp='XX'>XXX</msp>``` for correction
 - Named-entity boundary: tag: ```<ne>```
 
+## Criterial
+- https://github.com/mrpeerat/OSKut/blob/main/VISTEC-TP-TH-2021/Criteria.pdf
+
 ## Citation
 ```
 @inproceedings{limkonchotiwat-etal-2021-handling,
