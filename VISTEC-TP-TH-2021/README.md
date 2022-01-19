@@ -21,6 +21,9 @@ We compared our dataset to the biggest [Thai social media dictionary](https://gi
 ## Criterial
 - https://github.com/mrpeerat/OSKut/blob/main/VISTEC-TP-TH-2021/Criteria.pdf
 
+## Download word segmentation processed data
+- Link: https://drive.google.com/drive/folders/1-9D1E0iSvPSBLawSHeJiqUFhKHOhQ4-j?usp=sharing
+
 ## Citation
 ```
 @inproceedings{limkonchotiwat-etal-2021-handling,
